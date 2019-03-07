@@ -1,10 +1,14 @@
-import * as _ from 'lodash';
+// import * as _ from 'lodash';
 import { interval } from 'rxjs';
 import { take } from 'rxjs/operators';
+import { cube } from './math';
 
 function component() {
-    const element = document.createElement('div');
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+    const element = document.createElement('pre');
+    element.innerHTML = [
+        'Hello webpack!',
+        '5 cubed is equal to ' + cube(5)
+    ].join('\n\n');
     return element;
 }
 
